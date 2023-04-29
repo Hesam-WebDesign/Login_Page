@@ -1,21 +1,21 @@
-const wrapper = document.querySelector('.wrapper')
-const loginlink = document.querySelector('.login-link')
-const registerlink = document.querySelector('.register-link')
-const loginButton = document.querySelector('.login-btn')
-const closeIcon = document.querySelector('.close-icon')
+const wrapper = document.querySelector(".wrapper");
+const loginLink = document.querySelector(".login-link");
+const registerLink = document.querySelector(".register-link");
+const loginButton = document.querySelector(".login-btn");
+const closeIcon = document.querySelector(".close-icon");
 
-registerlink.addEventListener('click', () => {
-    wrapper.classList.add('active')
-})
+registerLink.addEventListener("click", () => {
+  wrapper.classList.add("active");
+});
 
-loginlink.addEventListener('click', () => {
-    wrapper.classList.remove('active')
-})
+loginLink.addEventListener("click", () => {
+  wrapper.classList.remove("active");
+});
 
-loginButton.addEventListener('click', () => {
-    wrapper.classList.add('popup')
-})
+loginButton.addEventListener("click", () => {
+  wrapper.classList.add("popup");
+});
 
-closeIcon.addEventListener('click', () => {
-    wrapper.classList.remove('popup')
-})
+closeIcon.addEventListener("click", () => {
+  wrapper.classList.remove("popup");
+});
