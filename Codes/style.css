@@ -83,6 +83,7 @@ header .navigation .login-btn:hover {
 
 .wrapper {
     position: relative;
+    top: 50px;
     width: 400px;
     height: 440px;
     background: transparent;
@@ -92,12 +93,39 @@ header .navigation .login-btn:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: scale(0);
+    transition: all ease-in-out 200ms;
+    overflow: hidden;
 }
 
-/* .wrapper .form-box {
-    width: 100%;
-    padding: 40px;
-} */
+.wrapper.popup {
+    transform: scale(1);
+}
+
+.wrapper.active {
+    height: 520px;
+}
+
+.wrapper.active .form-box.login {
+    transform: translateX(-400px);
+    transition: all ease-in-out 200ms;
+}
+
+.wrapper .form-box.login {
+    transform: translateX(0);
+    transition: all ease-in-out 200ms;
+}
+
+.wrapper.active .form-box.register {
+    transform: translateX(0);
+    transition: all ease-in-out 200ms;
+}
+
+.wrapper .form-box.register {
+    position: absolute;
+    transform: translateX(400px);
+    transition: all ease-in-out 200ms;
+}
 
 .wrapper .close-icon {
     position: absolute;
@@ -114,6 +142,7 @@ header .navigation .login-btn:hover {
     align-items: center;
     transition: all ease-in-out 300ms;
     cursor: pointer;
+    z-index: 1;
 }
 
 .wrapper .close-icon:hover {
